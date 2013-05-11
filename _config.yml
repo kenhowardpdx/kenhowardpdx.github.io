@@ -1,0 +1,13 @@
+plugins: ./_plugins
+
+exclude: ['Rakefile','config.rb']
+
+permalink: /blog/:year/:month/:title
+
+owner_link: http://kenhowardpdx.com/profile/
+
+url: http://kenhowardpdx.com
+
+title: A Blog About Website Design and Front-End Development
+
+image: /images/logo.png

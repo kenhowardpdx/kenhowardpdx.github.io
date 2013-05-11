@@ -1,0 +1,35 @@
+---
+layout: demo
+title: Responsive Google Map Demo
+summary: Making a map responsive has its challenges. This FitVids.JS solves this issue with its customSelector property.
+---
+
+<p><a href="/blog/2013/05/quick-and-easy-responsive-google-maps/"><strong>Learn how to create your own responsive map here.</strong></a></p>
+
+<p><em>Resize your browser</em> and watch as the map on top keeps its shape and the map on bottom resizes with the browser.</p>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
+<script type="text/javascript" src="jquery.fitvids.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$('.mapWrap').fitVids({ customSelector: "iframe[src*='maps.google.com']" });
+});
+
+</script>
+
+<h3>Take a basic 425 x 350 pixel iframe</h3>
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=oregon+convention+center&amp;aq=&amp;sll=37.6,-95.665&amp;sspn=50.534963,60.029297&amp;ie=UTF8&amp;hq=oregon+convention+center&amp;ll=45.528416,-122.663239&amp;spn=0.015633,0.032015&amp;t=m&amp;output=embed&amp;iwloc=near&amp;z=4"></iframe>
+<br /><br />
+
+<h3>Apply fitVids.js to the iframe</h3>
+<div class="mapWrap">
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=oregon+convention+center&amp;aq=&amp;sll=37.6,-95.665&amp;sspn=50.534963,60.029297&amp;ie=UTF8&amp;hq=oregon+convention+center&amp;ll=45.528416,-122.663239&amp;spn=0.015633,0.032015&amp;t=m&amp;output=embed&amp;iwloc=near&amp;z=4"></iframe>
+</div>
+
+<br />
+
+<pre class="language-clike prettyprint"><code class="language-clike">$(document).ready(function() {
+	$('.mapWrap').fitVids({ customSelector: "iframe[src*='maps.google.com']" });
+});
+</code></pre>

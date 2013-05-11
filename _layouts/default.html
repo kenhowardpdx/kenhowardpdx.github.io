@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title> {% if page.title %} {{ page.title }} | {% endif %} Ken Howard</title>
+  <meta name="description" content="{% if page.summary %}{{page.summary}}{% else %}A blog about web design and front-end web development from the trenches.{% endif %}" />
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="/favicon.ico">
+    <script src="/js/modernizr.js"></script>
+  {% if page.codehighlight %}
+    <script src="/js/prism.js"></script>
+  {% endif %}
+
+{% capture header %}
+ 
+{% if page.title %}
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ page.title }}" />
+{% else %}
+  <meta property="og:type" content="website" /> 
+{% endif %}
+ 
+{% if page.url %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+{% endif %}
+ 
+{% if page.date %}
+  <meta property="article:published_time" content="{{page.date | date_to_xmlschema}}" />
+{% endif %}
+ 
+{% if site.owner_link %}
+  <meta property="article:author" content="{{ site.owner_link }}" />
+{% endif %}
+
+{% if page.image %}
+  <meta property="og:image" content="{{ page.image }}" />
+{% else %}
+  <meta property="og:image" content="{{ site.image }}" />
+{% endif %}
+
+<meta property="og:description" content="{% if page.summary %}{{page.summary}}{% else %}A blog about web design and front-end web development from the trenches.{% endif %}" />
+ 
+{% endcapture %}{{ header | strip_newlines }}
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed for kenhowardpdx.com" href="/rss.xml" />
+
+</head>
+<body{% if page.pageclass %} class="{{ page.pageclass }}"{% endif %}>
+  <div class="top-bar group">
+    <div class="wrapper">
+      <a class="logo" href="/"><img src="/images/logo.png" alt=""/></a>
+      <nav>
+        <ul>
+          <li><a href="/blog"><i data-icon="`" aria-hidden="true"></i><span class="screen-reader-text on-hover">Blog</span></a></li>
+          <li><a href="/profile"><i data-icon="é" aria-hidden="true"></i><span class="screen-reader-text on-hover">Profile</span></a></li>
+          <li><a href="/projects"><i data-icon="¼" aria-hidden="true"></i><span class="screen-reader-text on-hover">Projects</span></a></li>
+          <li><a href="/contact"><i data-icon="Ö" aria-hidden="true"></i><span class="screen-reader-text on-hover">Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  {% if page.image %}
+  <div id="mainImage">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="projectImage" />
+  </div>
+  <div id="main" class="wrapper">
+ 
+    {{ content }}
+ 
+  </div>
+  {% else %}
+  <div id="main" class="wrapper">
+ 
+    {{ content }}
+ 
+  </div>
+  {% endif %}
+
+<footer>
+  <div class="wrapper">
+    <div class="grid group">
+
+      <div class="grid-1-3">
+        <a href="http://www.turtledove.com"><img src="/images/ftr-turtledove.png" /></a>
+        <p>I work at Turtledove Clemens, a full-service marketing agency located in Portland, OR.</p>
+      </div>
+      
+      <div class="grid-1-3">
+        <a href="http://www.simplicatedweb.com"><img src="/images/ftr-simplicated.png" /></a>
+        <p>I help small to medium sized businesses by providing professional web design &amp; development services.</p>
+      </div>
+      
+      <div class="grid-1-3">
+        <a href="http://www.twitter.com/kenhowardpdx"><img src="/images/ftr-twitter.png" /></a>
+        <p>Sometimes I tweet. Most times it's garbage, but every now and then it's something special.</p>
+      </div>
+
+    </div>
+    <p class="copyright">&copy; 2013 Ken Howard. All Rights Reserved.</p>
+  </div>
+</footer>
+
+{% if page.nojquery %}{% else %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
+{% endif %}
+
+<script src="/js/application.js"> </script>
+
+<script type="text/javascript">
+if (location.host != 'localhost:4000') {
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6386829-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+}
+
+</script>
+
+</body>
+</html>
