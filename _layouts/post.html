@@ -2,10 +2,16 @@
 layout: default
 ---
 <h1 class="post-title">{{ page.title }}</h1>
-<p><span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span></p>
+<p>By <a class="author-name" rel="author" href="https://plus.google.com/101593064197379464085/">Ken Howard</a> | <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span></p>
 <p class="post-summary">{{ page.summary }}</p>
 
 {{content}}
+
+<div class="socialLinks">
+	<p>
+		I sometimes share other really interesting stuff on <a href="https://plus.google.com/101593064197379464085/posts">Google+</a> and <a href="https://twitter.com/kenhowardpdx">Twitter</a>.
+	</p>
+</div>
 
 <div class="prevNextLinks group">
     {% if page.previous %} 

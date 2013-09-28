@@ -11,3 +11,7 @@ url: http://kenhowardpdx.com
 title: A Blog About Website Design and Front-End Development
 
 image: /images/logo.png
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]

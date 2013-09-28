@@ -1,16 +1,9 @@
+@import "variables";
 @import "normalize";
 @import "html5boilerplate";
+@import "resume";
 
 @import url(http://fonts.googleapis.com/css?family=Arbutus+Slab|Raleway:400,600,700,500);
-
-$borderColor: #1f2805;
-$fontColor: rgba(31,40,5,1);
-$highlightColor: #90bb13;
-$altHighlightColor: #1352bb;
-$altHighlightColorRGBA: rgba(149,167,196,0.5);
-$backgroundColor: #f5f8ea;
-$altBackgroundColor: #f4ffd4;
-$footerBackgroundColor: rgba(58,68,58,1);
 
 @mixin paddedbox {
   border:1px solid $borderColor;
@@ -130,6 +123,10 @@ html {
 	background-image: url('../images/bg.png');
 }
 
+ul, ol {
+	margin-bottom: 1em;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Arbutus Slab', 'Times New Roman', Georgia, serif;
 	font-weight: normal;
@@ -138,8 +135,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size: 4em;
-	margin: .25em 0;
+	font-size: 2em;
+	margin: 0;
+
+	@media screen and (min-width: 50em) {
+		font-size: 3em;
+	}
 }
 
 h2 {
@@ -216,8 +217,10 @@ blockquote {
 	margin: 0 auto;
 	text-align: center;
 	width: 25%;
-	padding-top: .5em;
+	max-width: 100px;
+	padding-top: 1em;
 	@media screen and (min-width: 50em) {
+		padding-top: .5em;
 		float: left;
 		padding-top: 0;
 		width: auto;
@@ -241,12 +244,14 @@ blockquote {
 
 .top-bar nav {
 	visibility: visible;
-	float: right;
-	@media screen and (max-width: 30em) {
-		clear: both;
-		float: none;
-		margin: .5em auto;
-		text-align: center;
+	clear: both;
+	float: none;
+	margin: .5em auto;
+	text-align: center;
+	@media screen and (min-width: 50em) {
+		clear: none;
+		float: right;
+		margin: 0;
 	}
 }
 
@@ -259,9 +264,11 @@ blockquote {
 	text-decoration: none;
 	position: relative;
 	text-align: center;
-	margin-left: 1em;
-	@media screen and (max-width: 30em) {
-		margin: 0 .5em;
+	font-size: .7em;
+	margin: 0 .5em;
+	@media screen and (min-width: 30em) {
+		margin: 0 0 0 1em;
+		font-size: 1em;
 	}
 	line-height: 1em;
 }
@@ -273,7 +280,8 @@ blockquote {
 	padding: 1em;
 }
 	.top-bar.alt .logo img{
-		width: 75%;
+		width: 95%;
+		max-width: 140px;
 		opacity: .7;
 		transition-duration: 0.25s;
 	}
@@ -339,8 +347,12 @@ nav a .on-hover {
 	border-radius: 5px;
 	font-size: .7em;
 	width: 100%;
-	background-color: rgba(0,0,0,0);
-	color: rgba(255,255,255,0);
+	background-color: rgba(0,0,0,1);
+	color: rgba(255,255,255,1);
+	@media screen and (min-width: 40em) {
+		background-color: rgba(0,0,0,0);
+		color: rgba(255,255,255,0);
+	}
 	transition: color 0.2s ease-in-out 0.05s, background-color 0.2s ease-in-out 0.05s;
 }
 
@@ -405,6 +417,10 @@ nav a:hover .on-hover{
 p.post-summary {
 	font-size: 1.4em;
 	line-height: 1.5em;
+}
+
+.blog h1.post-title+p {
+	font-size: .8em;
 }
 
 body.projects p.post-summary {
@@ -491,21 +507,27 @@ a.blogEntry:hover h2, a.blogEntry:hover h3, a.projectEntry:hover h2, a.projectEn
 }
 
 .projectPreview {
-	float: left;
-	background-color: rgba(0,0,0,0.05);
+	@media screen and (min-width: 40em) {
+		float: left;
+		width: 30%;
+		background-color: rgba(0,0,0,0.05);
+	}
+	text-align: center;
 	padding: .5em;
-	width: 30%;
 	margin-bottom: 1em;
-}
 
-.projectPreview img {
-	display: block;
-	border: 1px solid rgba(0,0,0,0.1);
+	img {
+		display: block;
+		border: 1px solid rgba(0,0,0,0.1);
+		margin: 0 auto;
+	}
 }
 
 .projectDetails {
-	float: right;
-	width: 66%;
+	@media screen and (min-width: 40em) {
+		float: right;
+		width: 66%;
+	}
 }
 
 body > footer {
@@ -529,4 +551,8 @@ body > footer a {
 	display: block;
 	margin: 0 auto 1em;
 	text-align: center;
+}
+
+a[href]:after {
+	content: "";
 }
