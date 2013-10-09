@@ -1,0 +1,43 @@
+---
+layout: demo
+title: FitVids.JS Issue #114 Test
+summary: Issue reported on FitVids.JS GitHub Repository.
+sitemap:
+    priority: 0.7
+    changefreq: monthly
+    lastmod: 2013-09-10T12:49:30-05:00
+---
+<blockquote>
+<p>This Vimeo iframe causes the video to be displayed really tall with big black bars. I think it must have something to do with the mix of ints and percents and the aspect ratio calculation. Sorry, my JavaScript is not strong enough yet to be able to suggest a fix.</p>
+</blockquote>
+
+<p><a href="https://github.com/davatron5000/FitVids.js/issues/114">Link to Issue on GitHub</a></p>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
+<script type="text/javascript" src="jquery.fitvids.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$('#fitVidsWrap').fitVids();
+});
+</script>
+
+<div id="fitVidsWrap">
+
+<h3>Testing Issue #114</h3>
+<iframe src="http://player.vimeo.com/video/17914974" height="200" width="100%" allowfullscreen="" frameborder="0"></iframe>
+<br /><br />
+
+<h3>Testing with Vimeo embed code</h3>
+<iframe src="http://player.vimeo.com/video/17914974" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<br /><br />
+
+<h3>Solution: Fixed Width and Height Attributes</h3>
+<iframe src="http://player.vimeo.com/video/17914974" width="500" height="278" allowfullscreen="" frameborder="0"></iframe>
+<br /><br />
+
+<p><strong>Solution:</strong> Apply fixed width and height values:</p>
+
+<pre class="language-clike prettycode"><code class="language-clike">&lt;iframe src="http://player.vimeo.com/video/17914974" width="500" height="278" allowfullscreen="" frameborder="0"&gt;&lt;/iframe&gt;</code></pre>
+
+</div>

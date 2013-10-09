@@ -1,0 +1,39 @@
+---
+layout: demo
+title: SOLVED&#58; FitVids.JS Issue #114 Test
+summary: Fix for issue reported on FitVids.JS GitHub Repository.
+sitemap:
+    priority: 0.7
+    changefreq: monthly
+    lastmod: 2013-09-10T12:49:30-05:00
+---
+<p><a href="https://github.com/davatron5000/FitVids.js/issues/114">Link to Issue on GitHub</a></p>
+
+<p><a href="/demos/fitvids-bug-test/">Link to Bug Test</a></p>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
+<script type="text/javascript" src="jquery.fitvids.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$('#fitVidsWrap').fitVids();
+});
+</script>
+
+<div id="fitVidsWrap">
+
+<h3>Solved Issue #114</h3>
+<p><strong>@ line 76 add</strong></p>
+<pre class="language-clike prettycode"><code class="language-clike">if (isNaN($this.attr('height')) || isNaN($this.attr('width')))
+{
+    $this.attr('height', 9);
+    $this.attr('width', 16);
+}
+</code></pre>
+
+<iframe src="http://player.vimeo.com/video/17914974" height="200" width="100%" allowfullscreen="" frameborder="0"></iframe>
+<br />
+<p><strong>HTML Source Code</strong></p>
+<pre class="language-clike prettycode"><code class="language-clike">&lt;iframe src="http://player.vimeo.com/video/17914974" height="200" width="100%" allowfullscreen="" frameborder="0"&gt;&lt;/iframe&gt;</code></pre>
+
+</div>

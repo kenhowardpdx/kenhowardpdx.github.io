@@ -1,0 +1,38 @@
+---
+layout: demo
+title: FitVids.JS Issue #114 Test
+summary: Issue reported on FitVids.JS GitHub Repository.
+sitemap:
+    priority: 0.7
+    changefreq: monthly
+    lastmod: 2013-09-10T12:49:30-05:00
+---
+<blockquote>
+<p>This Vimeo iframe causes the video to be displayed really tall with big black bars. I think it must have something to do with the mix of ints and percents and the aspect ratio calculation. Sorry, my JavaScript is not strong enough yet to be able to suggest a fix.</p>
+</blockquote>
+
+<p><a href="https://github.com/davatron5000/FitVids.js/issues/114">Link to Issue on GitHub</a></p>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
+<script type="text/javascript" src="jquery.fitvids.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$('#fitVidsWrap').not('.noFitVids').fitVids();
+});
+</script>
+
+<div id="fitVidsWrap">
+
+<h3>Testing Issue #115</h3>
+<iframe class="noFitVids" width="560" height="315" src="http://www.youtube.com/embed/kiKi2y1Fx3s" frameborder="0" allowfullscreen></iframe>
+
+<br />
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/kiKi2y1Fx3s" frameborder="0" allowfullscreen></iframe>
+
+<br />
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/kiKi2y1Fx3s" frameborder="0" allowfullscreen></iframe>
+
+</div>
