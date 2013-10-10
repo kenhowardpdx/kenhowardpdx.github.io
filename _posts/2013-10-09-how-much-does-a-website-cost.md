@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How Much Does A Website Cost?
-summary: It's and age old question and one most web professionals cringe at when they're asked it. Pricing a website doesn't take a one-size-fits-all approach.
+summary: It's an age old question and one most web professionals cringe at when they're asked it. Pricing a website doesn't take a one-size-fits-all approach.
 postimage: /images/post-pricing.png
 ---
 If you don't have a budget, it's likely you don't know how much a website is going to cost. I have a minimum price for my work to avoid requests to add small features to a website (ie, Social Icons, Update Hours, etc.). If the amount of work doesn't meet that threshold, I respectfully turn down the work.
