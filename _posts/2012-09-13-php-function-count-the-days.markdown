@@ -2,7 +2,6 @@
 layout: post
 title: PHP&#58; Function Displays Days Since Event
 summary: A helpful function that takes a UNIX timestamp and reports how many days ago that time occured.
-codehighlight: true
 ---
 While working on a job board implementation I needed to convert dates into an easy to read format. Users would be able to see when a job was posted: Today, Yesterday or 2, 3, 4 days ago.
 

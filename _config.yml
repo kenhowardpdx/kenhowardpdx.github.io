@@ -1,12 +1,14 @@
 plugins: ./_plugins
 
-exclude: ['Rakefile','config.rb']
+exclude: ['Rakefile','config.rb','package.json','node_modules','Gruntfile.js']
 
 permalink: /blog/:year/:month/:title
 
 owner_link: http://kenhowardpdx.com/profile/
 
 url: http://kenhowardpdx.com
+
+domain: kenhowardpdx.com
 
 title: A Blog About Website Design and Front-End Development
 

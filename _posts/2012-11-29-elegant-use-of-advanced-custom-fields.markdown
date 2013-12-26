@@ -2,7 +2,6 @@
 layout: post
 title: Elegant Use of Advanced Custom Fields in WordPress
 summary: One of the best things about WordPress is its limitless functionality. With the use of plugins, a WordPress install can be transformed with great ease.
-codehighlight: true
 ---
 [Advanced Custom Fields](http://www.advancedcustomfields.com/) is one such plugin that makes WordPress very powerful.
 

@@ -2,7 +2,6 @@
 layout: post
 title: Working With WordPress Excerpt Length
 summary: When you need to corral WordPress to output your data where filters aren't practicle, write a custom function.
-codehighlight: true
 ---
 One of the beauties of WordPress is that the developers have seriously thought of every possible element and made a function for it. Better yet, they’ve given us the ability to remove and apply filters against those already awesome functions.
 

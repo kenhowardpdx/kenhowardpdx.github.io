@@ -1,0 +1,320 @@
+---
+layout: demo
+title: "Google Maps API V3 Test"
+summary: Testing the new Google Maps API
+sitemap:
+    priority: 0.7
+    changefreq: monthly
+    lastmod: 2013-12-04T12:49:30-05:00
+---
+
+<style type="text/css">
+
+#map img {
+  max-width: none;
+  height: auto;
+}
+
+</style>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=true"> </script>
+<script type="text/javascript">
+
+$.extend({
+  getUrlVars: function(){
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  },
+  getUrlVar: function(name){
+    return $.getUrlVars()[name];
+  }
+});
+
+var urlVars = $.getUrlVars();
+
+// Repair missing locations
+var locationHelper = {"brea":"brea, ca", "bremerton":"bremerton, wa", "salem":"salem, or", "washington":"washington state"}
+
+var searchTerm = urlVars.search;
+
+for (var val in locationHelper)
+
+  if(searchTerm != undefined) {
+    searchTerm = searchTerm.toLowerCase().replace(new RegExp(val, "g"), locationHelper[val]);
+  }
+
+var opts =  {search: searchTerm, ll: urlVars.ll, zoom: parseInt(urlVars.zoom, 10)}
+
+
+var g_mapData = [];
+var g_exceptions = [];
+var g_defaultCenter = [45.5200, -122.6819];
+var g_sw = [43.3666667, -124.2166667]; // coos bay OR - sw corner of search preference bounds
+var g_ne = [48.2766667, -116.5522222]; // sandpoint ID, - ne corner of search preference bounds
+var g_zoomOnClick = 3; /* how much we zoom in when click on a spot henry */
+var g_tooManyForResults = 20; /* 20 or more, do map_many */
+var g_fewZoomOut = 1; /* This many or fewer, zoom out one more */
+var g_maxZoom = 4; /* don't zoom out past this (note: lower number is zoomed further out */
+var geocoder;
+var map;
+var defaults = {};
+
+function initialize(options) {
+  geocoder = new google.maps.Geocoder();
+  var latlng = latLng(g_defaultCenter);
+  var mapOptions = {
+    zoom: 8,
+    center: latlng,
+    //disableDefaultUI: true
+  }
+  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  var opts = $.extend({}, defaults, options||{});
+  $.ajax({
+    type: 'get',
+    url: 'centersData-tmp.js',
+    dataType: 'json',
+    success: function(data) {
+      g_mapData = data.mapData;
+      g_exceptions = data.exceptions;
+      console.log(opts.search);
+      if (opts.search) { searchString = decodeURIComponent(opts.search.replace(/\+/g, ' ')); }
+      if (opts.centerPageName) { mapCenter(map, opts.centerPageName); }
+      else if (opts.search || opts.ll) { mapSearch(map, searchString, opts.ll, opts.zoom); }
+      else { mapMulti(map, latLng(g_defaultCenter), g_maxZoom, false); }
+      //mapMulti(map, latLng(g_defaultCenter), g_maxZoom, false);
+    }
+  });
+}
+
+/*function codeAddress(search) {
+  //var address = document.getElementById('address').value;
+  geocoder.geocode( { 'address': search }, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}*/
+
+function isUndefined(x) {var u; return x === u;}
+
+function isSearchException(search) {
+  var ret = false;
+  $.each(g_exceptions, function(i, exc) {
+    var regex = new RegExp(exc.pattern, 'i');
+    if (regex.test(search)) { ret = exc.result; return false; }
+  });
+  return ret;
+}
+
+function latLng(ll) {
+  return new google.maps.LatLng(ll[0], ll[1]);
+}
+
+function mapMulti(map, center, zoom, results) {
+  var tooManyForResults;
+  
+  map.setCenter(center, zoom);
+  if (tooManyForResults) { mapMany(map, g_mapData); }
+  else { mapFew(map, g_mapData, results); }
+}
+
+function mapMany(map, mapData) {
+  $.each(mapData, function(i, mapDatum) {
+    var myLatLng = new google.maps.LatLng(mapDatum.ll[0], mapDatum.ll[1]);
+    var zoomTo = map.getZoom()+g_zoomOnClick; /* we zoom by g_zoomOnClick when click on a henry */
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: mapDatum.center
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+      /* $.param doesn't preserve ',', and geocoder wants one, so work around that */
+      var llString = mapDatum.ll[0]+'XXX'+mapDatum.ll[1];
+      var paramStr = $.param({ll: llString, zoom: zoomTo});
+      // now, map that 'XXX' to ',' so google is happy
+      paramStr = paramStr.replace('XXX', ',');
+      window.location = 'results.html?'+paramStr;
+    });
+  });
+}
+
+function mapFew(map, mapData, results) {
+  $.each(mapData, function(i, mapDatum) {
+    var myLatLng = new google.maps.LatLng(mapDatum.ll[0], mapDatum.ll[1]);
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: mapDatum.center
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+      window.location = '/locations/' + mapDatum.pageName;
+    });
+  });
+  if (results) {
+    mapData = sortMapData(mapData);
+    addDataToResults(results, mapData);
+    showMarkersInResults(map, mapData);
+    google.maps.event.addListener(map, 'moveend', function() {
+      showMarkersInResults(map, mapData);
+    });
+    google.maps.event.addListener(map, 'zoomend', function() {
+      showMarkersInResults(map, mapData);
+    });
+  }
+}
+
+function mapSearch(map, search, ll, zoom) {
+  var geocoder;
+  var results = $('#results');
+  var found;
+  if (!results.length) { results = false; }
+  
+  if (!isUndefined(ll)) { // ll passed in
+    if (isUndefined(zoom)) { zoom = 7; } // something valid for sure
+    ll = ll.split(',');
+    mapMulti(map, latLng(ll), zoom, results);
+  } else { // use search
+    found = isSearchException(search); // check for map search exception
+    if (found) {
+      mapMulti(map, latLng(found.ll), found.zoom, results);
+    } else {
+      geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode( { 'address': search}, function(response, status) {
+          map.fitBounds(response[0].geometry.viewport);
+          var place, ll, bounds;
+          if (!response || status.code !== 'OK') {
+            mapMulti(map, latLng(g_defaultCenter), g_maxZoom, results); // failed, use the std map
+          } else {
+            console.log(response);
+            place = response.geometry.location;
+            ll = new google.maps.LatLng(place[1], place[0]);
+            mapMulti(map, ll, zoom, results); // use our place & zoom
+          }
+        });
+    }
+  }
+}
+
+function addDataToResults(results, mapData) {
+  var list = document.createElement('ul');
+  $.each(mapData, function(i, mapDatum) {
+    var item = document.createElement('li');
+    var link = document.createElement('a');
+    $(link).attr('href', centerAddr(mapDatum)).text(mapDatum.center);
+    $(item).append(link);
+    $(list).append(item);
+    mapDatum.item = item;
+  });
+  $(results).append(list);
+}
+
+function centerAddr(mapDatum) {
+  //console.log(mapDatum);
+  var centerNum = mapDatum.pageName;
+  var g_pathPrefix = '';
+  var centerUrl = $(".centerList a[rel='" + centerNum + "']").attr('href');
+  return ('' === g_pathPrefix) ? 'center_main.html' : centerUrl;
+}
+
+function sortMapData(mapData) {
+  var citySorted = merge_sort(mapData, function(a, b) {
+    if (a.city === b.city) { return 0; }
+    return (a.city > b.city) ? -1 : 1;
+  });
+  var stateSorted = merge_sort(citySorted, function(a, b) {
+    if (a.state === b.state) { return 0; }
+    return ((a.state < b.state) ? -1 : 1);
+  });
+  return stateSorted;
+}
+
+function merge(left, right, comparison) {
+  var result = [];
+  while((left.length > 0) && (right.length > 0)) {
+    if(comparison(left[0], right[0]) < 0) { result.push(left.shift()); }
+    else { result.push(right.shift()); }
+  }
+  while(left.length > 0) { result.push(left.shift()); }
+  while(right.length > 0) { result.push(right.shift()); }
+  return result;
+}
+
+function merge_sort(array, comparison) {
+  if(array.length < 2) { return array; }
+  var middle = Math.ceil(array.length/2);
+  return merge(
+    merge_sort(array.slice(0,middle), comparison),
+    merge_sort(array.slice(middle), comparison),
+    comparison
+  );
+}
+
+function showMarkersInResults(map, mapData) {
+  google.maps.event.addListener(map, 'bounds_changed', function() {
+    var bounds = map.getBounds();
+    $.each(mapData, function(i, mapDatum) {
+      var item = mapDatum.item;
+      var ll = latLng(mapDatum.ll);
+      if (!$(item)) { return false; }
+      if (map.getBounds().contains(ll)) {
+        $(item).show();
+      } else { $(item).hide(); }
+    });
+  });
+}
+
+$(document).ready(function() {
+  initialize(opts);
+$.extend({
+    getUrlVars: function(){
+      var vars = [], hash;
+      var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+      for(var i = 0; i < hashes.length; i++)
+      {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+      }
+      return vars;
+    },
+    getUrlVar: function(name){
+      return $.getUrlVars()[name];
+    }
+  });
+
+  var urlVars = $.getUrlVars();
+
+  // Repair missing locations
+  var locationHelper = {"brea":"brea, ca", "bremerton":"bremerton, wa", "salem":"salem, or", "washington":"washington state", "yakima":"yakima, wa"}
+
+  var searchTerm = urlVars.search;
+
+  for (var val in locationHelper)
+    if(searchTerm != undefined) {
+      searchTerm = searchTerm.toLowerCase().replace(new RegExp(val, "g"), locationHelper[val]);
+    }
+
+  //codeAddress(searchTerm);
+});
+
+</script>
+
+<div id="map" style="width:100%;height:500px;background-color:#555;"></div>
+<div id="results"></div>
