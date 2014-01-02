@@ -19,7 +19,8 @@ module.exports = function(grunt) {
           // capture all except css
           '*.html', '*.yml', 'js/**.js','*.md','*.markdown',
           '_posts/**', '_includes/**', '_layouts/**', 'projects/**',
-          'resume/**', 'profile/**', 'demos/**', 'contact/**', 'blog/**'
+          'resume/**', 'profile/**', 'demos/**', 'contact/**', 'blog/**',
+          'images/**'
           ],
         tasks: 'shell:jekyll',
       }

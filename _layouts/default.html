@@ -52,70 +52,37 @@
 
 </head>
 <body{% if page.pageclass %} class="{{ page.pageclass }}"{% endif %}>
-  <div class="top-bar group">
-    <div class="wrapper">
-      <a class="logo" href="/"><img src="/images/logo.png" alt=""/></a>
-      <nav>
+
+  <div class="group columns nopadding">
+  <header class="col-1-4 side" role="banner">
+      <div class="group branding">
+        <a class="logo" href="/"><img src="/images/logo.png" alt=""/></a>
+        <h1>Ken Howard</h1>
+        <p>Designer, Front-End Developer, Husband &amp; Father.</p>
+      </div>
+      <div>
+        <p><a href="/contact">Have a project? Hire me.</a></p>
+      </div>
+      <nav class="group">
         <ul>
-          <li><a href="/blog"><i data-icon="`" aria-hidden="true"></i><span class="screen-reader-text on-hover">Blog</span></a></li>
-          <li><a href="/profile"><i data-icon="é" aria-hidden="true"></i><span class="screen-reader-text on-hover">Profile</span></a></li>
-          <li><a href="/projects"><i data-icon="¼" aria-hidden="true"></i><span class="screen-reader-text on-hover">Projects</span></a></li>
-          <li><a href="/contact"><i data-icon="Ö" aria-hidden="true"></i><span class="screen-reader-text on-hover">Contact</span></a></li>
+          <li class="nav_profile"><a href="/profile">Profile</a></li>
+          <li class="nav_projects"><a href="/projects">Projects</a></li>
+          <li class="nav_blog"><a href="/blog">Blog</a></li>
+          <li class="nav_contact"><a href="/contact">Contact</a></li>
         </ul>
       </nav>
-    </div>
-  </div>
-
-  {% if page.image %}
-  <div id="mainImage">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <img src="{{ page.image }}" alt="{{ page.title }}" class="projectImage" />
-  </div>
-  <div id="main" class="wrapper">
+  </header>
+  <div id="main" class="col-3-4 main">
  
     {{ content }}
  
   </div>
-  {% else %}
-  <div id="main" class="wrapper">
-
-  {% if page.pageclass == 'resume' %}
-  <a href="javascript:window.print()" class="print">Print Resumé</a>
-  {% endif %}
- 
-    {{ content }}
- 
   </div>
-  {% endif %}
-
-<footer>
-  <div class="wrapper">
-    <div class="grid group">
-
-      <div class="grid-1-3">
-        <a href="http://www.turtledove.com"><img src="/images/ftr-turtledove.png" /></a>
-        <p>I work at Turtledove Clemens, a full-service marketing agency located in Portland, OR.</p>
-      </div>
-      
-      <div class="grid-1-3">
-        <a href="http://www.simplicatedweb.com"><img src="/images/ftr-simplicated.png" /></a>
-        <p>I help small to medium sized businesses by providing professional web design &amp; development services.</p>
-      </div>
-      
-      <div class="grid-1-3">
-        <a href="http://www.twitter.com/kenhowardpdx"><img src="/images/ftr-twitter.png" /></a>
-        <p>Sometimes I tweet. Most times it's garbage, but every now and then it's something special.</p>
-      </div>
-
-    </div>
-    <p class="copyright">&copy; 2013 Ken Howard. All Rights Reserved.</p>
-  </div>
-</footer>
 
 {% if page.nojquery %}{% else %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
 
-<script src="/js/scripts.min.js"></script>
+<script src="/js/scripts.js"></script>
 <script>
 // using jQuery
 $('.fitvids').fitVids();
