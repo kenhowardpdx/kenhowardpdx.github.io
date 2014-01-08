@@ -14,6 +14,11 @@ First, you'll need to determine whether your URLs will have the 'www' prefix or 
 
 You'll then want to locate your .htaccess file. If you don't have an .htaccess file, crack open your favorite text editor and create a new black file in the root of your websites public folder (usually 'public_html' or 'httpdocs'). And be sure to save the file as '.htaccess', not 'htaccess.txt'.
 
+<div class="notice general">
+  <h3>Don't care about the why and the how?</h3>
+  <p><a href="http://beamusup.com">BeamUsUp</a> has a really handy <a href="http://beamusup.com/generate-htaccess/">.htaccess generator</a> you should check out.</p>
+</div>
+
 Place the following code in your .htaccess file and un-comment (remove #) the lines you wish to use
 <pre class="language-clike prettycode"><code class="language-clike">RewriteEngine on
 RewriteBase /  

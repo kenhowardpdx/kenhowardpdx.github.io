@@ -1,9 +1,9 @@
 ---
 layout: default
-pageClass: blog
+pageclass: blog
 ---
-<h1 class="post-title">{{ page.title }}</h1>
-<p>By <a class="author-name" rel="author" href="https://plus.google.com/101593064197379464085/">Ken Howard</a> | <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span></p>
+<p class="post-meta">By <a class="author-name" rel="author" href="https://plus.google.com/101593064197379464085/">Ken Howard</a> | <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span></p>
+<h1 class="page-title">{{ page.title }}</h1>
 
 <p class="post-summary">{{ page.summary }}</p>
 
@@ -24,9 +24,9 @@ pageClass: blog
 
 <div class="prevNextLinks group">
     {% if page.previous %} 
-        <a rel="prev" class="textLeft" href="{{ page.previous.url }}">&larr; Older</a>
+        <a rel="prev" class="button left" href="{{ page.previous.url }}">&larr; Older</a>
     {% endif %}
     {% if page.next %} 
-        <a rel="next" class="textRight" href="{{ page.next.url }}">Newer &rarr;</a>
+        <a rel="next" class="button right" href="{{ page.next.url }}">Newer &rarr;</a>
     {% endif %}
 </div>

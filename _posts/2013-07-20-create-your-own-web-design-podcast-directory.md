@@ -4,7 +4,10 @@ title: Create Your Own Web Design Podcast Directory
 summary: I love listening to podcasts during my commute to and from work. And I love finding new podcasts. But there isn't an up-to-date podcast directory that I rely on to discover new shows. Hence, create your own.
 ---
 
-**\*\*UPDATE: Shortly after I wrote this list of excellent web design related podcasts, [Webby Podcasts](http://webbypodcasts.co.uk/) was released. Thanks for a great list, [Wesley](http://twitter.com/wesleyburden). I strongly recommend you check out Webby Podcasts as it has more podcasts listed along with ratings and analysis.**
+<div class="notice general">
+<h3>** Update **</h3>
+<p>Shortly after I wrote this list of excellent web design related podcasts, <a href="http://webbypodcasts.co.uk/">Webby Podcasts</a> was released. Thanks for a great list, <a href="http://twitter.com/wesleyburden">Wesley</a>. I strongly recommend you check out Webby Podcasts as it has more podcasts listed along with ratings and analysis.</p>
+</div>
 
 One of my biggest complaints about podcasts is they don't sync across devices and platforms. I may be listening to [The Big Web Show](http://5by5.tv/bigwebshow) while at work and head home before the show is over. If I want to keep listening to the show during my commute I open [BeyondPod for Android](http://www.beyondpod.com/Android/), and start playing the episode from there -- skipping ahead to where I left off.
 

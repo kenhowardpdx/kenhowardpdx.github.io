@@ -2,10 +2,23 @@ $brandColor: #3581c1;
 $brandDarkColor: #204f75;
 $brandAltColor: #87b300;
 $defaultColor: #333;
+$mutedColor: #cbcbcb;
 $backgroundColor: #fefefe;
+$cardBackgroundColor: #d9d9d9;
+$cardHoverBackgroundColor: $brandAltColor;
 
 $linkColor: $brandColor;
+$linkAltColor: #afe800;
 $linkHoverColor: #87b300;
+
+/* project type colors */
+$typeColorCss: #27b800;
+$typeColorHtml: #ed4732;
+$typeColorJavaScript: #b600b8;
+$typeColorMySQL: #fc6b00;
+$typeColorPhp: #6900ba;
+$typeColorWordPress: #0075b8;
+$typeColorVisualDesign: #b20054;
 
 
 /* need to set these later */

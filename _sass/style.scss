@@ -2,8 +2,11 @@
 @import "normalize";
 @import "html5boilerplate";
 @import "resume";
+@import "codehighlight";
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import "compass/css3/transition";
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400,600,700);
 
@@ -78,16 +81,13 @@ img {
 }
 
 a, a:active, a:link, a:visited {
-	color: $highlightColor;
-	transition-property: color;
-	transition-timing-function: ease-in-out;
-	transition-duration: 0.2s;
-	transition-delay: 0.05s;
+	color: $linkColor;
 	text-decoration: none;
+	@include single-transition(color, 0.2s, ease-in-out, 0.05s);
 }
 
 a:hover {
-	color: $altHighlightColor;
+	color: $linkHoverColor;
 }
 
 .group:after {
@@ -140,6 +140,20 @@ a:hover {
 	display: none;
 }
 
+.button, a.button {
+	text-decoration: none;
+	display: inline-block;
+	margin: 0 0 1em;
+	padding: .5em 1em;
+	background-color: #444;
+	color: #fff;
+	@include single-transition(color, 0.2s, ease-in-out, 0.05s);
+	@include single-transition(background-color, 0.2s, ease-in-out, 0.05s);
+	&.radius {
+		@include border-radius(4px);
+	}
+}
+
 body, html {
 	color: $fontColor;
 	font-size: 100%;
@@ -165,12 +179,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size: 2em;
-	margin: 0;
-
-	@media screen and (min-width: 50em) {
-		font-size: 3em;
-	}
+ /* place h1 style here */
+   font-size: 3em;
+   margin-bottom: .5em;
 }
 
 h2 {
@@ -266,3 +277,181 @@ blockquote {
 	padding: 1em 2em;
 	background: transparent url('../images/body-bg.png') 99% -1% no-repeat;
 }
+
+.project-image {
+	margin: 0 auto 1.5em;
+	display: block;
+}
+
+.project-types {
+	margin: 0 0 10px;
+	padding: 0;
+	@extend .group;
+	li {
+		display: block;
+		float: left;
+		width: 24px;
+		height: 5px;
+		overflow: hidden;
+		font-size: 0;
+		background-color: #000;
+		margin: 0 0 3px 0;
+	}
+	[data-type*='type-css'] {
+		background-color: $typeColorCss;
+	}
+	[data-type*='type-html'] {
+		background-color: $typeColorHtml;
+	}
+	[data-type*='type-javascript'] {
+		background-color: $typeColorJavaScript;
+	}
+	[data-type*='type-mysql'] {
+		background-color: $typeColorMySQL;
+	}
+	[data-type*='type-php'] {
+		background-color: $typeColorPhp;
+	}
+	[data-type*='type-wordpress'] {
+		background-color: $typeColorWordPress;
+	}
+	[data-type*='type-visual'] {
+		background-color: $typeColorVisualDesign;
+	}
+}
+
+.project-preview {
+	.button {
+		background-color: $brandColor;
+		&:hover,&:focus {
+			background-color: $brandDarkColor;
+		}
+	}
+	h2 {
+		margin-bottom: 10px;
+	}
+	.project-details {
+		padding: 1em;
+		background-color: $cardBackgroundColor;
+		@include single-transition(background-color, 0.2s, ease-in-out, 0.05s);
+		color: #fff;
+		margin-bottom: 20px;
+		@include border-radius(5px);
+		&:hover {
+			background-color: $cardHoverBackgroundColor;
+		}
+	}
+	img {
+		border: 2px solid #000;
+	}
+}
+
+.key {
+	margin: 0 0 2em;
+	font-size: .9em;
+	list-style: none;
+	li {
+		margin: 0 1em 0 0;
+		padding: 0;
+		display: inline-block;
+		font-weight: bold;
+		border-style: solid;
+		&.type-key-css {
+			color: $typeColorCss;
+			border-bottom-width: 2px;
+			border-color: $typeColorCss;
+		}
+		&.type-key-html {
+			color: $typeColorHtml;
+			border-bottom-width: 2px;
+			border-color: $typeColorHtml;
+		}
+		&.type-key-javascript {
+			color: $typeColorJavaScript;
+			border-bottom-width: 2px;
+			border-color: $typeColorJavaScript;
+		}
+		&.type-key-mysql {
+			color: $typeColorMySQL;
+			border-bottom-width: 2px;
+			border-color: $typeColorMySQL;
+		}
+		&.type-key-php {
+			color: $typeColorPhp;
+			border-bottom-width: 2px;
+			border-color: $typeColorPhp;
+		}
+		&.type-key-wordpress {
+			color: $typeColorWordPress;
+			border-bottom-width: 2px;
+			border-color: $typeColorWordPress;
+		}
+		&.type-key-visual {
+			color: $typeColorVisualDesign;
+			border-bottom-width: 2px;
+			border-color: $typeColorVisualDesign;
+		}
+	}
+}
+
+.post-title {
+	margin-bottom: 0;
+}
+
+.post-summary {
+	padding: 0;
+	margin-bottom: 1em;
+}
+
+.post-meta {
+	font-size: .8em;
+	color: $mutedColor;
+	font-style: italic;
+	margin: 0;
+	padding: 0;
+	a {
+	  color: $mutedColor;
+  	font-style: italic;
+	}
+}
+
+.post-group {
+	margin-bottom: 2em;
+}
+
+.notice {
+	background-color: $mutedColor;
+	@include border-radius(5px);
+	padding: 1em 1em 0;
+	margin-bottom: 1em;
+
+	&.general {
+		background-color: $brandColor;
+		color: #fff;
+		@include text-shadow(-1px 1px 0px $brandDarkColor);
+		a {
+			color: $linkAltColor;
+			&:hover, &:focus {
+				color: $brandAltColor;
+			}
+		}
+	}
+}
+
+.prevNextLinks {
+	.left {
+		display: block;
+		float: left;
+	}
+	.right {
+		display: block;
+		float: right;
+	}
+}
+
+/*code {
+	display: inline-block;
+	background-color: $mutedColor;
+	padding: 0px 5px;
+	@include border-radius(5px);
+}*/
