@@ -3,6 +3,7 @@
 @import "html5boilerplate";
 @import "resume";
 @import "codehighlight";
+@import "wordpress";
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
 @import "compass/css3/text-shadow";
@@ -180,8 +181,9 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
  /* place h1 style here */
-   font-size: 3em;
+   font-size: 2em;
    margin-bottom: .5em;
+   @include bp(medium) { font-size: 3em; }
 }
 
 h2 {
@@ -214,13 +216,16 @@ blockquote {
 
 .side {
 	background: transparent url('../images/top-bar-bg.png');
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	padding: 0;
+	padding: 0 0 1em;
 	border-width: 0; /* reset from grid style */
 	border-right-width: 6px;
 	border-color: $brandAltColor;
+	@include bp(small) {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		padding: 0;
+	}
 	@include bp(medium) {
 		width: 250px;
 	}
@@ -268,14 +273,17 @@ blockquote {
 @include navselect('contact');
 
 .main {
-	margin-left: 25%;
 	border-width: 0;
+	padding: 1em;
+	@include bp(small) {
+		margin-left: 25%;
+	}
 	@include bp(medium) {
 		max-width: 830px;
 		margin-left: 250px;
+		background: transparent url('../images/body-bg.png') 99% -1% no-repeat;
+		padding: 1em 2em;
 	}
-	padding: 1em 2em;
-	background: transparent url('../images/body-bg.png') 99% -1% no-repeat;
 }
 
 .project-image {
@@ -321,6 +329,20 @@ blockquote {
 }
 
 .project-preview {
+	margin: 0 auto 1em;
+	width: 100%;
+	@include bp(small) {
+		width: 220px;
+		float: left;
+		padding: 0 20px 20px 0;
+	}
+	@include bp(medium) {
+		width: 33%;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+	}
 	.button {
 		background-color: $brandColor;
 		&:hover,&:focus {
@@ -435,6 +457,19 @@ blockquote {
 				color: $brandAltColor;
 			}
 		}
+	}
+}
+
+blockquote {
+	&.pullquote {
+		margin: 0;
+		border-style: solid;
+		border-color: $defaultColor;
+		border-width: 2px 0;
+		padding: 1em .5em 0;
+		float: right;
+		margin-right: -1em;
+		margin-left: 1em;
 	}
 }
 

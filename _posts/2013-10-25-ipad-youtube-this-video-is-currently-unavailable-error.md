@@ -15,6 +15,11 @@ We use an AppleTV and mirror our iPad to it to show clients various media (websi
 
 When we accessed our website from the iPad and tapped the play button on the YouTube video, the video didn't play but instead there was a message that read **"This video is currently unavailable."**
 
+<blockquote class="pullquote general">
+  <h3>tl;dr</h3>
+  <p>Clear Safari's Cookies</p>
+</blockquote>
+
 That's a very uninformative error message if you ask me.
 
 So, I opened up my web browser on my computer and checked to see if the video worked there. Sure enough, all was well.
