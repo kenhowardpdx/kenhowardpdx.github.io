@@ -423,6 +423,7 @@ blockquote {
 .post-summary {
 	padding: 0;
 	margin-bottom: 1em;
+  font-size: 1.2em;
 }
 
 .post-meta {
@@ -439,6 +440,9 @@ blockquote {
 
 .post-group {
 	margin-bottom: 2em;
+  .post-summary {
+    font-size: 1em;
+  }
 }
 
 .notice {
@@ -484,9 +488,9 @@ blockquote {
 	}
 }
 
-/*code {
+code {
 	display: inline-block;
 	background-color: $mutedColor;
 	padding: 0px 5px;
 	@include border-radius(5px);
-}*/
+}
