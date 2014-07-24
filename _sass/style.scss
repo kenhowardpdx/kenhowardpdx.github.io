@@ -487,10 +487,3 @@ blockquote {
 		float: right;
 	}
 }
-
-code {
-	display: inline-block;
-	background-color: $mutedColor;
-	padding: 0px 5px;
-	@include border-radius(5px);
-}

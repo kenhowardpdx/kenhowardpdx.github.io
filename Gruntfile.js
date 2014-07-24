@@ -99,9 +99,9 @@ module.exports = function(grunt) {
   // compass watch
   grunt.registerTask('compassCopy', ['compass', 'copy:css']);
   // Default task.
-  grunt.registerTask('default', ['concat', 'uglify', 'compassCopy', 'imagemin', 'shell:jekyll']);
+  grunt.registerTask('build', ['concat', 'uglify', 'compassCopy', 'imagemin', 'shell:jekyll']);
   // Development Task
-  grunt.registerTask('dev', ['connect', 'watch']);
+  grunt.registerTask('default', ['connect', 'watch']);
   // Deploy Task
   grunt.registerTask('deploy', ['shell:rake']);
 

@@ -94,7 +94,7 @@
 	string = string.replace(/##/g,'<span class="matchedTerm">').replace(/&&/g,'</span>'); // Clean up for display
 	return string;
   };
-  
+
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
 $(function(){
@@ -102,13 +102,14 @@ $(function(){
   $("a[href^='http://']").attr("target","_blank");
 
   // Top Bar - need to improve appearance
-  /*$('.top-bar nav').addClass('hidden');
+  $('.top-bar nav').addClass('hidden');
   $('.menu-link').on('click', function(e){
     e.preventDefault();
     $('.top-bar nav').toggleClass('hidden');
-  });*/
+  });
 
-  $('pre').addClass('prettyprint');
+  $('pre').addClass('prettyprint language-clike');
+  $('code').addClass('language-clike');
 
   $(window).scroll(function(){
     if($(window).scrollTop() <= 20){
