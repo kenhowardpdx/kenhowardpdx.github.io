@@ -10,6 +10,6 @@ There are other jQuery plugins that do this very same thing except they require 
 
 This plugin is the simplest version of those plugins. It can be used both as a keystroke highlighter and a search results highlighter.
 
-[The SimpleHighlight.js Demo](/demos/simplehighlight/) shows how the plugin can be used for keystroke highlighting. You can enter your own text and keywords and see the output in real-time.
+[The SimpleHighlight.js Demo](http://simplehighlightjs.com) shows how the plugin can be used for keystroke highlighting. You can enter your own text and keywords and see the output in real-time.
 
 [Head on over to GitHub](https://github.com/kenhowardpdx/SimpleHighlight.js) and grab yourself a simple text highlighter for search results today!

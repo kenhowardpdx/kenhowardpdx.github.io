@@ -9,16 +9,16 @@ I don't have all of the facts and my solution may not be your solution.
 
 Today I was presented with an issue. We had a prospective client coming in and we wanted to share [our agency video](http://www.youtube.com/watch?v=kiKi2y1Fx3s&rel=0), which highlights past projects and clients and shows a bit of our personality.
 
-The way we present the video on our website is through YouTube's iframe method. This has worked terrific until today. 
+The way we present the video on our website is through YouTube's iframe method. This has worked terrific until today.
 
 We use an AppleTV and mirror our iPad to it to show clients various media (websites, videos, etc.).
 
 When we accessed our website from the iPad and tapped the play button on the YouTube video, the video didn't play but instead there was a message that read **"This video is currently unavailable."**
 
-<blockquote class="pullquote general">
+<div class="notice general">
   <h3>tl;dr</h3>
   <p>Clear Safari's Cookies</p>
-</blockquote>
+</div>
 
 That's a very uninformative error message if you ask me.
 

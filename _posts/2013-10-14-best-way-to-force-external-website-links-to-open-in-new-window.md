@@ -7,8 +7,7 @@ Use the following code on any website and you will age less each year. Gaurantee
 
 The best part about this little line of code is that it doesn't require a domain name. It uses the javascript 'location' object. This works really well when you're working with different environments (local, dev, staging, production).
 
-<pre class="language-clike prettycode"><code class="language-clike">
-$("a[href^='http://']:not([href^='http://" + location.hostname + "'])").attr("target","_blank");
+<pre class="language-clike prettycode"><code class="language-clike">$("a[href^='http://']:not([href^='http://" + location.hostname + "'])").attr("target","_blank");
 
 // Bonus - Automatically record clicks in Google Analytics
 $("a[href^='http://']:not([href^='http://" + location.hostname + "']").on('click', function() {

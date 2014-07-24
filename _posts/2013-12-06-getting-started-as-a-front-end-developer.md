@@ -12,11 +12,11 @@ In your journey you'll read or hear about HTML, HTML5, XHTML, CSS, CSS3, JavaScr
 
 Focus on HTML, CSS and JavaScript. Don't bother with the rest until you've mastered these 3 fundamental languages.
 
-HTML should be written with open and closing tags. Example: `<p>` is the opening tag for a paragraph, `</p>` is a closing tag for a paragraph. Opening tags start the thing, closing tags end the thing.
+HTML should be written with open and closing tags. Example: `<p>` is the opening tag for a paragraph, `</p>` is a closing tag for a paragraph. Opening tags start the thing, closing tags end the thing. Don't listen when others say "closing tags is so XHTML 1.1". Just close your tags. You'll sleep well knowing your code is maintainable.
 
-CSS is CSS is CSS, no matter what version you think you are using. If you use something that is declared as CSS3, it will only work in browsers that support it. It won't break your website.
+CSS is CSS is CSS, no matter what version you think you are using. If you use something that is declared as CSS3, it will only work in browsers that support it. It won't break your website. (Curious to know which browsers support a CSS feature? Checkout [caniuse.com](http://caniuse.com/))
 
-JavaScript should never be required for your website to work. If your website requires JavaScript, you have failed. Hang your head in shame.
+JavaScript should never be required for your website to work. If your website requires JavaScript, you have failed. Hang your head in shame. (Business-centered Web Apps Excluded)
 
 ### Getting Started
 
@@ -65,7 +65,7 @@ There are a lot of books on web design and development. Anything published befor
 
 Many web developers like to share what they've learned. [GitHub](http://github.com) has a large user-base that can be a bit intimidating to a new-comer. Check out [CodePen](http://codepen.io) for front-end developer specific code examples.
 
-[Treehouse](http://teamtreehouse.com/) is also a great lesson-based platform for learning HTML, CSS & JavaScript.
+[Treehouse](http://teamtreehouse.com/) is also a great lesson-based platform for learning HTML, CSS & JavaScript. Other learning sites include [Code Academy](http://codeacademy.com), [Code School](http://codeschool.com), and [PluralSight](http://pluralsight.com/).
 
 **In addition, put these sites in your RSS reader of choice:**
 
@@ -82,7 +82,7 @@ I've gathered a [list of podcasts for web design and development](http://kenhowa
 
 The most important shows in that list are as follows:
 
-*  [ShopTalk Show](http://shoptalkshow.com/) - Chris Coyier & Dave Rupert play sound effects and talk about the web.
+* [ShopTalk Show](http://shoptalkshow.com/) - Chris Coyier & Dave Rupert play sound effects and talk about the web.
 * [The Big Web Show](http://www.muleradio.net/thebigwebshow/) - Jeffrey Zeldman interviews guests about their experiences working on the web.
 * [Happy Monday](http://www.happymondaypodcast.com/) - Josh Long & Sarah Parmenter interview guests about the web and productivity.
 * [Unfinished Business](http://unfinished.bz/) - Andy Clarke talks with guests about running a web design business.

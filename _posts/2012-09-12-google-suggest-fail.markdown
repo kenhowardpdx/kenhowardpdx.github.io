@@ -3,9 +3,8 @@ layout: post
 title: Google Suggest Fail
 summary: Google Suggest, which is an extremely useful and powerful tool that allows you to find what you need quickly, fails our children by exposing them to damaging material.
 ---
-+--{.alignleft}
+
 ![how to grow...](http://25.media.tumblr.com/tumblr_ma9g7zDCO01rgucydo1_400.png)
-=--
 
 Google Suggest has been a friend of mine since it launched in 2008. The driving concept driving is that Google looks at each character as you type and suggests the most common search terms that begin with that string of characters. And in some cases it will suggest a variant of the terms you've typed.
 

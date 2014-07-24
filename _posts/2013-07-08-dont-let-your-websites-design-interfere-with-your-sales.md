@@ -6,4 +6,4 @@ summary: As web designers, it's our duty to ensure a website's goals are in-line
 
 >When designing a website, evaluate your customers needs and their intent without making broad assumptions. Consider the capabilities of their device and context (place, time, position) of their environment in which they are consuming your content.
 
-**Continue Reading: [Don’t Let Your Website’s Design Interfere With Your Sales](http://www.simplicatedweb.com/blog/web-design/dont-let-your-websites-design-interfere-with-sales)**
+**Continue Reading: [Don’t Let Your Website’s Design Interfere With Your Sales](http://simplicatedweb.com/knowledge/dont-let-your-websites-design-interfere-with-sales/)**

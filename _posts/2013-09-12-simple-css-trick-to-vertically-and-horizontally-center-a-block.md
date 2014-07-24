@@ -5,7 +5,9 @@ summary: Centering a block horizontally is no problem. Centering an absolute pos
 ---
 I don't remember where I found this solution so I appologize to whoever originated it. I've been using this method for about a year. Thankfully it's short and easy to remember.
 
-**\* Update:** I just found an article [written here](http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/) about the same exact thing!
+<div class="notice general">
+<p><strong>Update:</strong> I just found <a href="http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/">an article</a> about the same exact thing!</p>
+</div>
 
 <pre class="language-clike prettycode"><code class="language-clike">.outerblock {
 	position:relative;
