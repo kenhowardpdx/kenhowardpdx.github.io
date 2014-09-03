@@ -53,8 +53,8 @@
 </head>
 <body{% if page.pageclass %} class="{{ page.pageclass }}"{% endif %}>
 
-  <div class="group columns nopadding">
-  <header class="col-1-4 side" role="banner">
+  <div class="container">
+  <header role="banner">
       <div class="group branding">
         <a class="logo" href="/"><img src="/images/logo.png" alt=""/></a>
         <h1>Ken Howard</h1>
@@ -80,14 +80,8 @@
   </div>
 
 {% if page.nojquery %}{% else %}
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
-<script src="/js/prism.js"> </script>
 
 <script src="/js/scripts.js"></script>
-<script>
-// using jQuery
-$('.fitvids').fitVids();
-</script>
 {% endif %}
 
 </body>
