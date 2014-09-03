@@ -1,19 +1,34 @@
 {
-  "name": "kenhowardpdx.com",
-  "version": "1.0.0",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.2.7",
-    "grunt-contrib-imagemin": "~0.4.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-sass": "~0.6.0",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-compass": "~0.7.0",
-    "grunt-contrib-connect": "~0.5.0",
-    "grunt-shell": "~0.6.1"
+  "name": "KenHowardPDX",
+  "version": "2.0.0",
+  "description": "Front End Web Developer Blog",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenhowardpdx/kenhowardpdx.github.io.git"
+  },
+  "keywords": [
+    "website",
+    "jekyll",
+    "github-pages"
+  ],
+  "author": "Ken Howard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kenhowardpdx/kenhowardpdx.github.io/issues"
+  },
+  "homepage": "https://github.com/kenhowardpdx/kenhowardpdx.github.io",
   "dependencies": {
-    "load-grunt-tasks": "~0.2.1"
+    "bower": "^1.3.9",
+    "gulp": "^3.8.7",
+    "gulp-concat": "^2.3.4",
+    "gulp-connect": "^2.0.6",
+    "gulp-livereload": "^2.1.0",
+    "gulp-load-plugins": "^0.5.3",
+    "gulp-sass": "^0.7.3",
+    "path": "^0.4.9"
   }
 }

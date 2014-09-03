@@ -1,7 +1,5 @@
 plugins: ./_plugins
 
-exclude: ['Rakefile','config.rb','package.json','node_modules','Gruntfile.js']
-
 permalink: /blog/:year/:month/:title
 
 owner_link: http://kenhowardpdx.com/profile/
@@ -14,6 +12,4 @@ title: A Blog About Website Design and Front-End Development
 
 image: /images/logo.png
 
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+exclude: ["bower_components","node_modules","package.json","README.markdown","gulpfile.js","bower.json","Gem*"]

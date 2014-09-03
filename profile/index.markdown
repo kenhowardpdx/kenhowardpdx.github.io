@@ -1,7 +1,7 @@
 ---
 layout: project
 title: I'm Ken Howard
-summary: A Web Designer &amp; Front-End Developer in Portland, Oregon
+summary: A Web Designer &amp; Front End Developer in Portland, Oregon
 pageclass: profile
 image: /images/ken.png
 sitemap:

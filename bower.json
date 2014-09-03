@@ -1,0 +1,27 @@
+{
+  "name": "KenHowardPDX",
+  "version": "2.0.0",
+  "homepage": "https://github.com/kenhowardpdx/kenhowardpdx.github.io",
+  "authors": [
+    "Ken Howard <ken@simplicatedweb.com>"
+  ],
+  "description": "Front End Web Developer Blog",
+  "main": ".",
+  "keywords": [
+    "website",
+    "jekyll",
+    "github-pages"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.0.2"
+  }
+}
