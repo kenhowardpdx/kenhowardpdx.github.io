@@ -96,7 +96,7 @@ Using Angular's `$inject` method, we can explicitly declare our dependencies. We
         .controller('MyController', MyController)
 
     // Inject dependencies
-    MyController.$inject('myService');
+    MyController.$inject = ['myService'];
 
     // Controller
     function MyController (myService) {
