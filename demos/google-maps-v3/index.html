@@ -1,11 +1,6 @@
 ---
-layout: demo
 title: "Google Maps API V3 Test"
-summary: Testing the new Google Maps API
-sitemap:
-    priority: 0.7
-    changefreq: monthly
-    lastmod: 2013-12-04T12:49:30-05:00
+summary: "Testing the new Google Maps API"
 ---
 
 <style type="text/css">
@@ -128,7 +123,7 @@ function latLng(ll) {
 
 function mapMulti(map, center, zoom, results) {
   var tooManyForResults;
-  
+
   map.setCenter(center, zoom);
   if (tooManyForResults) { mapMany(map, g_mapData); }
   else { mapFew(map, g_mapData, results); }
@@ -184,7 +179,7 @@ function mapSearch(map, search, ll, zoom) {
   var results = $('#results');
   var found;
   if (!results.length) { results = false; }
-  
+
   if (!isUndefined(ll)) { // ll passed in
     if (isUndefined(zoom)) { zoom = 7; } // something valid for sure
     ll = ll.split(',');
