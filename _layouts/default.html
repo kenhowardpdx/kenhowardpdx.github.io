@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title> {% if page.title %} {{ page.title }} | {% endif %} Ken Howard | Web Developer</title>
+    <meta name="description" content="{% if page.summary %}{{page.summary}}{% else %}A blog about JavaScript, Angular, Unix, and Web Development.{% endif %}" />
+    <meta name="viewport" content="width=device-width" />
+    {% if page.noindex %}
+    <meta name="robots" content="noindex, follow" />
+    {% endif %}
+</head>
+<body>
+    <div class="container">
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+    </div>
+</body>
+</html>
