@@ -1,0 +1,22 @@
+{
+  "name": "kenhowardpdx",
+  "version": "2.0.0",
+  "homepage": "https://github.com/kenhowardpdx/kenhowardpdx.github.io",
+  "authors": [
+    "Ken Howard <ken@simplicatedweb.com>"
+  ],
+  "description": "Personal Blog",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2"
+  }
+}

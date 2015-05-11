@@ -9,3 +9,5 @@ _images/
 _publish/
 .DS_Store
 node_modules/
+*.lock
+css/

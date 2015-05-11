@@ -1,5 +1,20 @@
 ---
 layout: default
-title: "Home!"
 ---
-<h1>Home!</h1>
+
+<div class="blogEntries">
+    {% for post in site.posts limit:5 %}
+    <div class="post-group">
+        <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        {% if post.summary %}
+        <p class="post-summary">{{ post.summary }}</p>
+        {% endif %}
+        <span class="post-meta">Published {{ post.date | date: "%B %d, %Y" }}</span>
+    </div>
+    {% endfor %}
+<div class="prevNextLinks group">
+<a href="/blog/" class="button right">Blog Archive &rarr;</a>
+</div>
+</div><!-- .blogEntries -->
+
+
