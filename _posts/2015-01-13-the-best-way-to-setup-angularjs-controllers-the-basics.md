@@ -13,7 +13,7 @@ This article focuses on the basics of setting up an angular application and a co
 
 To get started, we'll create our html file (index.html). There's nothing special about this file except you'll notice the `ng-app` attribute on the `html` element which tells Angular we want to use the entire document as our application, and the `ng-controller` attribute on the `div` element which tells Angular that we want to use a controller for the contents of that element.
 
-```
+{% highlight html %}
 <!doctype html>
 <html ng-app="app">
     <head>
@@ -30,24 +30,24 @@ To get started, we'll create our html file (index.html). There's nothing special
         <script src="app.js"></script>
     </body>
 </html>
-```
+{% endhighlight %}
 
 Now we'll create our angular application (app.js).
 
-```
+{% highlight javascript %}
 (function () {
     'use strict';
 
     angular.module('app', []);
 })();
-```
+{% endhighlight %}
 
 ###The Controller
 Now that we have the basic application configured, let's walk through setting up a controller.
 
 In the `app.js` file, let's create our controller.
 
-```
+{% highlight javascript %}
 (function () {
     'use strict';
 
@@ -57,9 +57,8 @@ In the `app.js` file, let's create our controller.
     function MyController () {
 
     }
-
 })();
-```
+{% endhighlight %}
 
 Notice that we're hanging the controller directly off the instantiation of the `app` module. But, what if we want to inject a service into our controller? We have two options if we want to use [dependency injection](https://code.angularjs.org/1.3.8/docs/guide/di).
 
@@ -67,7 +66,7 @@ Notice that we're hanging the controller directly off the instantiation of the `
 
 We'll want to avoid this type of dependency injection as it's not very clear what is happening to someone less familiar with Angular. Notice the array that starts with a collection of strings referring to our injected services and ending with our controller. Example:
 
-```
+{% highlight javascript %}
 (function () {
     'use strict';
 
@@ -79,13 +78,13 @@ We'll want to avoid this type of dependency injection as it's not very clear wha
     }
 
 })();
-```
+{% endhighlight %}
 
 ####DI Option #2: [Manual Injection](https://github.com/johnpapa/angularjs-styleguide#manually-identify-dependencies)
 
 Using Angular's `$inject` method, we can explicitly declare our dependencies. We'll want to detach our controller from the main app so we can move it to it's own file or another closure.
 
-```
+{% highlight javascript %}
 (function () {
     'use strict';
 
@@ -104,6 +103,6 @@ Using Angular's `$inject` method, we can explicitly declare our dependencies. We
     }
 
 })();
-```
+{% endhighlight %}
 
 If you are wondering why we would write more code than necessary and separating our controller from our injections and from our app, we're doing this so our code can be more maintainable and intentional. We avoid being clever in favor of making our code readable and digestable for the next developer, or our future selves.

@@ -1,5 +1,6 @@
 @import "settings";
 @import "foundation";
+@import "syntax";
 
 // Or selectively include components
 // @import
@@ -69,9 +70,18 @@
 		margin: 20px 0;
 	}
 	
+	.post-summary {
+		font-size: 1.3em;
+		margin-bottom: 20px;
+	}
+	
 	h2 {
 		font-size: 2em;
 	}
+}
+
+.post-comments {
+	margin: 20px 0;
 }
 
 pre {
