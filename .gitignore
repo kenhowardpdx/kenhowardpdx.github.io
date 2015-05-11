@@ -10,4 +10,3 @@ _publish/
 .DS_Store
 node_modules/
 *.lock
-css/
