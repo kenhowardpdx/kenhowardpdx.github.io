@@ -1,11 +1,6 @@
 ---
-layout: demo
-title: SimpleHighlight.js Demo
-summary: Highlighting terms in a string with a simple jQuery plugin
-sitemap:
-    priority: 0.7
-    changefreq: monthly
-    lastmod: 2013-09-27T12:00:00-07:00
+title: "SimpleHighlight.js Demo"
+summary: "Highlighting terms in a string with a simple jQuery plugin"
 ---
 
 **[Head on over to GitHub](https://github.com/kenhowardpdx/SimpleHighlight.js) and grab yourself a simple text highlighter for search results today!**
@@ -37,7 +32,7 @@ function showHighlight() {
 	highlight = highlight.trim().split(' ');
 	var newString = $('#output').html($.simpleHighlight( string, highlight ));
 }
-	
+
 &lt;/script&gt;
 
 &lt;style type="text/css"&gt;
@@ -62,7 +57,7 @@ function showHighlight() {
 		highlight = highlight.trim().split(' ');
 		var newString = $('#output').html($.simpleHighlight( string, highlight ));
 	}
-	
+
 </script>
 
 <style type="text/css">

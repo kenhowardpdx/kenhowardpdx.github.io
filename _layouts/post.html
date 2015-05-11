@@ -1,32 +1,24 @@
 ---
 layout: default
-pageclass: blog
 ---
-<p class="post-meta">By <a class="author-name" rel="author" href="https://plus.google.com/101593064197379464085/">Ken Howard</a> | <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span></p>
-<h1 class="page-title">{{ page.title }}</h1>
 
-<p class="post-summary">{{ page.summary }}</p>
-
-
-{% if page.postimage %}
-
-<div class="group post-image alignleft"><img src="{{ page.postimage }}" alt="{{ page.title }}" /></div>
-
-{% endif %}
-
-{{content}}
-
-<div class="socialLinks">
-	<p>
-		I sometimes share other really interesting stuff on <a href="https://plus.google.com/101593064197379464085/posts">Google+</a> and <a href="https://twitter.com/kenhowardpdx">Twitter</a>.
-	</p>
+<div class="post-content">
+	<h1 class="post-title">{{ page.title }}</h1>
+	{{content}}
 </div>
 
-<div class="prevNextLinks group">
-    {% if page.previous %} 
-        <a rel="prev" class="button left" href="{{ page.previous.url }}">&larr; Older</a>
-    {% endif %}
-    {% if page.next %} 
-        <a rel="next" class="button right" href="{{ page.next.url }}">Newer &rarr;</a>
-    {% endif %}
+<div class="post-comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	    /* * * CONFIGURATION VARIABLES * * */
+	    var disqus_shortname = 'kenhowardpdx';
+	    
+	    /* * * DON'T EDIT BELOW THIS LINE * * */
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
