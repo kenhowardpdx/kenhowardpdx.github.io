@@ -5,11 +5,10 @@ summary: Centering a block horizontally is no problem. Centering an absolute pos
 ---
 I don't remember where I found this solution so I appologize to whoever originated it. I've been using this method for about a year. Thankfully it's short and easy to remember.
 
-<div class="notice general">
-<p><strong>Update:</strong> I just found <a href="http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/">an article</a> about the same exact thing!</p>
-</div>
+**Update:** I just found [an article](http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/) about the same exact thing!
 
-<pre class="language-clike prettycode"><code class="language-clike">.outerblock {
+{% highlight css %}
+.outerblock {
 	position:relative;
 	width:500px;
 	height:300px;
@@ -25,7 +24,7 @@ I don't remember where I found this solution so I appologize to whoever originat
 	width: 100px;
 	height: 100px;
 }
-</code></pre>
+{% endhighlight %}
 
 <p data-height="268" data-theme-id="0" data-slug-hash="gkAhj" data-user="kenhowardpdx" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/kenhowardpdx/pen/gkAhj'>Simple CSS Vertical and Horizontal Centering</a> by kenhowardpdx (<a href='http://codepen.io/kenhowardpdx'>@kenhowardpdx</a>) on <a href='http://codepen.io'>CodePen</a></p>
 <script async src="http://codepen.io/assets/embed/ei.js"></script>
