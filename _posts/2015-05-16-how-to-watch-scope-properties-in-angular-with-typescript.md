@@ -80,7 +80,7 @@ But this isn't very flexible. What if we were using this controller in multiple 
 Instead of passing the `$watch` a string literal, let's give it a function that returns the property we want to watch:
 
 {% highlight javascript %}
-$scope.$watch(() => { return this.house.isOpen; }, (newValue, oldValue) => {
+$scope.$watch(() => { return this.frontDoor.isOpen; }, (newValue, oldValue) => {
 	// frontDoor.isOpen has changed
 });
 {% endhighlight %}
@@ -97,7 +97,7 @@ class HouseController
 	{
 		this.frontDoor = new Door();
 		
-		$scope.$watch(() => { return this.house.isOpen; }, (newValue, oldValue) => {
+		$scope.$watch(() => { return this.frontDoor.isOpen; }, (newValue, oldValue) => {
 			if (newValue !== oldValue) {
 				var doorState = (newValue === true) ? 'open' ? 'closed';
 				alert('The door is ' + doorState);
