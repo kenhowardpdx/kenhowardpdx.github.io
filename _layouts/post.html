@@ -4,6 +4,16 @@ layout: default
 
 <div class="post-content">
 	<h1 class="post-title">{{ page.title }}</h1>
+	<div class="post-meta row">
+		<div class="medium-3 column">
+			{{ page.date | date: "%B %d, %Y" }}
+		</div>
+		{%if page.path %}
+		<div class="medium-3 column">
+			<a class="post-meta-edit button tiny right" href="//github.com/kenhowardpdx/kenhowardpdx.github.io/edit/master/_posts/{{ page.path }}">Edit this page on GitHub</a>
+		</div>
+		{% endif %}
+	</div>
 	<p class="post-summary">{{ page.summary }}</p>
 	{{content}}
 </div>
