@@ -5,7 +5,7 @@ summary: "There's more than one way to watch a property on your scope in Angular
 path: 2015-05-16-how-to-watch-scope-properties-in-angular-with-typescript.md
 ---
 
-For this demo I'll be opening and closing a door and watching the `isDoor` property for changes. Here is the very simple `Door` class:
+For this demo I'll be opening and closing a door and watching the `isOpen` property for changes. Here is the very simple `Door` class:
 
 {% highlight javascript %}
 class Door
