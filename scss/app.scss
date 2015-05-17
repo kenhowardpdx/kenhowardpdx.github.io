@@ -89,7 +89,7 @@ pre {
 	background-color: #f8f8f8;
 	border: 1px solid #d2d2d2;
 	padding: 1em;
-	white-space: pre-wrap;
+	overflow-x: scroll;
 	code {
 		border-width: 0;
 	}
