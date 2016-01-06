@@ -8,13 +8,13 @@ This just a quick note to give you some direction on how to enable ES6 module lo
 
 First, you'll need to be ok with using the babel compiler. While it won't be used for your production code, the babel compiler with the es2015 preset essentially down-samples your code to es5 so mocha can run it.
 
-1. Install the required dependencies:
+## Install the required dependencies:
 
 ```
     npm install babel-register babel-preset-es2015 --save-dev
 ```
 
-2. Create _**.babelrc**_ in the root of your project
+## Create _**.babelrc**_ in the root of your project
 
 ```
     {
@@ -22,7 +22,7 @@ First, you'll need to be ok with using the babel compiler. While it won't be use
     }
 ```
 
-3. Update the _**test**_ task in _**package.json**_
+## Update the _**test**_ task in _**package.json**_
 
 ```
     {
