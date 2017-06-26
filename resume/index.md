@@ -1,3 +1,12 @@
+---
+title: Ken Howard's Resume | Web Developer
+summary: Creative, self motivated, restless web developer.
+pageclass: resume
+noindex: true
+replacetitle: true
+name: Ken Howard
+---
+
 ##Contact Information
 **Email:** <a href="mailto:ken@simplicatedweb.com">ken@simplicatedweb.com</a>  
 **Phone:** <a href="tel:5032659335">(503) 265-9335</a>  
