@@ -7,12 +7,12 @@ replacetitle: true
 name: Ken Howard
 ---
 
-##Contact Information
+## Contact Information
 **Email:** <a href="mailto:ken@simplicatedweb.com">ken@simplicatedweb.com</a>  
 **Phone:** <a href="tel:5032659335">(503) 265-9335</a>  
 **LinkedIn:** <a href="http://lnkd.in/g7DhUM">kennyhoward</a>
 
-##Kowledge & Skills
+## Knowledge & Skills
 **Languages:** HTML, CSS, SASS, LESS, JavaScript, PHP, YAML  
 **Libraries/APIs:** jQuery, Constant Contact, Yelp, MailChimp, Facebook, Geolocation and more  
 **CMS:** WordPress, Joomla!, Jekyll, ZenCart  
@@ -23,7 +23,7 @@ name: Ken Howard
 **Multimedia Software:** Flash, After Effects, Final Cut Pro X  
 **Other:** Codekit, LiveReload, SubVersion, Git, Responsive Web Design
 
-##Professional Experience
+## Professional Experience
 **CSG Pro,** Portland, OR  
 **Web Developer,** February 2014 - Present
 
@@ -64,7 +64,7 @@ name: Ken Howard
 * Provided clients with training to maintain their websites.
 
 
-##Education
+## Education
 **Completed coursework toward A.A.S. Degree,** 2007 - 2009  
 **Mt. Hood Community College,** Gresham, OR  
 *Computer Information Systems, Web Management/Web Master*  
