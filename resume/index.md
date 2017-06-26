@@ -1,6 +1,6 @@
 ##Contact Information
 **Email:** <a href="mailto:ken@simplicatedweb.com">ken@simplicatedweb.com</a>  
-**Phone:** <a href="tel:5035129323">(503) 512-9323</a>  
+**Phone:** <a href="tel:5032659335">(503) 265-9335</a>  
 **LinkedIn:** <a href="http://lnkd.in/g7DhUM">kennyhoward</a>
 
 ##Kowledge & Skills
@@ -15,8 +15,15 @@
 **Other:** Codekit, LiveReload, SubVersion, Git, Responsive Web Design
 
 ##Professional Experience
+**CSG Pro,** Portland, OR  
+**Web Developer,** February 2014 - Present
+
+* Build web applications on Angular (1.x, 2.x+), Knockout, .NET 4, .NET Core, Node.js, Entity Framework, Sequelize
+* Present to team about new technologies
+* Work with client team to deliver feature complete, cross platform, web applications.
+
 **Turtledove Clemens,** Portland, OR  
-**Interactive Manager,** July 2011 - Present
+**Interactive Manager,** July 2011 - February 2014
 
 * Design & Develop, Landing Pages, Facebook Contest Entry Forms, E-mail Newsletters, and Display Banner Ads for client marketing campaigns.
 * Managed freelancer development projects.
