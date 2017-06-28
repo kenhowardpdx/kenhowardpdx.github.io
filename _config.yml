@@ -9,7 +9,3 @@ url: http://kenhowardpdx.com
 domain: kenhowardpdx.com
 
 title: A Blog About Website Design and Front-End Development
-
-markdown: redcarpet
-
-highlighter: pygments
