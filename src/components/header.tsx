@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }): JSX.Element => (
   <header
     style={{
       background: `rebeccapurple`,

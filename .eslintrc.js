@@ -11,6 +11,9 @@ module.exports = {
   },
   plugins: ['standard', 'react'],
   rules: {
+    // eslint - options
+    semi: ['error', 'always'],
+
     // standard plugin - options
     'standard/object-curly-even-spacing': ['error', 'either'],
     'standard/array-bracket-even-spacing': ['error', 'either'],
@@ -19,6 +22,9 @@ module.exports = {
 
     // react plugin - options
     'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error'
+    'react/jsx-uses-vars': 'error',
+
+    // @typescript-eslint - options
+    '@typescript-eslint/indent': ['error', 2]
   }
 };

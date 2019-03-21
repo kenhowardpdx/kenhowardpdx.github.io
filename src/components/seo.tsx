@@ -10,25 +10,25 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-interface nameMeta {
+interface NameMeta {
   content: string;
   name: string;
 }
 
-interface propertyMeta {
+interface PropertyMeta {
   content: string;
   property: string;
 }
 
-interface seoProps {
+interface SeoProps {
   description?: string;
   lang?: string;
-  meta?: nameMeta & propertyMeta;
+  meta?: NameMeta & PropertyMeta;
   keywords?: string[];
   title: string;
 }
 
-function SEO({ description, lang, meta, keywords = [], title }: seoProps) {
+function SEO ({ description, lang, meta, keywords = [], title }: SeoProps): JSX.Element {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -89,9 +89,9 @@ function SEO({ description, lang, meta, keywords = [], title }: seoProps) {
         .concat(
           keywords.length > 0
             ? {
-                name: `keywords`,
-                content: keywords.join(`, `)
-              }
+              name: `keywords`,
+              content: keywords.join(`, `)
+            }
             : []
         )
         .concat(meta)}

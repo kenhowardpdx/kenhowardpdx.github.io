@@ -2,15 +2,26 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
+import AnalyticsLink from '../components/analytics-link';
 
-const IndexPage = ({ data }) => (
+interface IndexPageProps {
+  data: any; // eslint-disable-line
+}
+
+const IndexPage = ({ data }: IndexPageProps): JSX.Element => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    {data.allMarkdownRemark.edges.map(({ node: post }, i) => {
-      const { title } = post.frontmatter;
-      return <h1 key={i}>{title}</h1>;
+    {data.allMarkdownRemark.edges.map(({ node: post }, i: number) => {
+      const {
+        fields: { slug },
+        frontmatter: { title }
+      } = post;
+      return (
+        <h1 key={i}>
+          <AnalyticsLink url={slug} label={title} />
+        </h1>
+      );
     })}
   </Layout>
 );
@@ -23,6 +34,9 @@ export const query = graphql`
     ) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
           }
