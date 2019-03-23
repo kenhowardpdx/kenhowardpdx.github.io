@@ -15,12 +15,15 @@ const IndexPage = ({ data }: IndexPageProps): JSX.Element => (
     {data.allMarkdownRemark.edges.map(({ node: post }, i: number) => {
       const {
         fields: { slug },
-        frontmatter: { title }
+        frontmatter: { title, summary }
       } = post;
       return (
-        <h1 key={i}>
-          <AnalyticsLink url={slug} label={title} />
-        </h1>
+        <div key={i} className="post-summary">
+          <h1>
+            <AnalyticsLink url={slug} label={title} />
+          </h1>
+          <div dangerouslySetInnerHTML={{ __html: summary }} />
+        </div>
       );
     })}
   </Layout>
@@ -29,7 +32,7 @@ const IndexPage = ({ data }: IndexPageProps): JSX.Element => (
 export const query = graphql`
   query {
     allMarkdownRemark(
-      limit: 10
+      limit: 5
       sort: { fields: [fileAbsolutePath], order: DESC }
     ) {
       edges {
@@ -39,6 +42,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            summary
           }
         }
       }
