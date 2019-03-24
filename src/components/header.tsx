@@ -1,11 +1,29 @@
-import { Link } from 'gatsby';
+import { Link, graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Img from 'gatsby-image';
+
+const Logo = (): JSX.Element => (
+  <StaticQuery
+    query={graphql`
+      query {
+        logo: file(relativePath: { eq: "logo.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={(data) => <Img fluid={data.logo.childImageSharp.fluid} />}
+  />
+);
 
 const Header = ({ siteTitle }): JSX.Element => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#5d205d`,
       marginBottom: `1.45rem`
     }}
   >
@@ -13,18 +31,28 @@ const Header = ({ siteTitle }): JSX.Element => (
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`
+        padding: `0rem 1.0875rem 0.3rem`
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `white`,
+            fontSize: `1.5rem`,
+            color: `#9bc618`,
             textDecoration: `none`
           }}
         >
-          {siteTitle}
+          <div
+            style={{
+              width: `40px`,
+              display: `inline-block`,
+              margin: `0 10px 0 0`
+            }}
+          >
+            <Logo />
+          </div>
+          <span style={{ display: `inline-block` }}>{siteTitle}</span>
         </Link>
       </h1>
     </div>

@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const KenHoward = () => (
+const KenHoward = (): JSX.Element => (
   <StaticQuery
     query={graphql`
       query {
@@ -22,7 +22,7 @@ const KenHoward = () => (
   />
 );
 
-const IndexPage = () => (
+const IndexPage = (): JSX.Element => (
   <Layout>
     <SEO
       title="About Ken Howard"
