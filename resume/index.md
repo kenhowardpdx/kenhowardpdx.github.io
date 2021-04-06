@@ -12,19 +12,19 @@ to solve it is with collaboration. I'm a collaborative team member and not
 afraid to voice my opinion while capable of hearing the opinions of others.
 
 ## Contact Information
-**Email:** <a href="mailto:ken@kenhoward.dev">ken@kenhoward.dev</a>
-**Phone:** <a href="tel:9712910252">971-291-0252</a>
-**LinkedIn:** <a href="http://lnkd.in/g7DhUM">kennyhoward</a>
+**Email:** <a href="mailto:ken@kenhoward.dev">ken@kenhoward.dev</a><br>
+**Phone:** <a href="tel:9712910252">971-291-0252</a><br>
+**LinkedIn:** <a href="http://lnkd.in/g7DhUM">kennyhoward</a><br>
 **GitHub:** <a href="https://github.com/kenhowardpdx">kenhowardpdx</a>
 
 ## Knowledge & Skills
-**Languages:** Go, TypeScript, JavaScript (Node.js)
-**Database:** MySQL, PostgreSQL
-**Technologies:** Kafka, Kubernetes, AWS Lambda, AWS Fargate, AWS S3
+**Languages:** Go, TypeScript, JavaScript (Node.js)<br>
+**Database:** MySQL, PostgreSQL<br>
+**Technologies:** Kafka, Kubernetes, AWS Lambda, AWS Fargate, AWS S3<br>
 **Philosophy:** Dependencies are tech debt. You can go far with copy and paste.
 
 ## Professional Experience
-**Nike, Inc.** Beaverton, OR
+**Nike, Inc.** Beaverton, OR<br>
 **Lead Software Engineer,** July 2017 - Present
 
 * Leading a team of skilled engineers building Nike's consumer (_click stream_)
@@ -36,7 +36,7 @@ seemless stream of data-flow from client to analytics dashboard.
 * Work with 3rd party services like Adobe Analytics, Optimizely, Segment,
 Amazon S3, Okta, and many more.
 
-**CSG Pro,** Portland, OR
+**CSG Pro,** Portland, OR<br>
 **Web Developer,** February 2014 - July 2017
 
 * Developed web applications using libraries including Angular (v1.x, v2.x+),
@@ -45,14 +45,14 @@ Knockout, .NET (v4.x+, Core v1.x+), Node.js, Entity Framework, and Sequelize.
 * Worked with client teams to deliver feature complete, cross-platform, web
 applications.
 
-**Treehouse,** Portland, OR
+**Treehouse,** Portland, OR<br>
 **Guest Teacher,** October 2015 - March 2017
 
 * "Building a MEAN Application" (Angular v1.x at the time).
 * "Introducing ES2015".
 * "Angular Basics" (Angular v2.x at the time).
 
-**Turtledove Clemens,** Portland, OR
+**Turtledove Clemens,** Portland, OR<br>
 **Interactive Manager,** July 2011 - February 2014
 
 * Designed & Developed websites, landing pages, Facebook contest entry forms, e-mail newsletters, display banner ads, and more.
@@ -60,27 +60,21 @@ applications.
 * Worked with clients such as Wendy's, Oil Can Henry's, Clackamas County
 
 ## Education
-**Completed coursework toward A.A.S. Degree,** 2007 - 2009
-**Mt. Hood Community College,** Gresham, OR
+**Mt. Hood Community College,** Gresham, OR<br>
+**Completed coursework toward A.A.S. Degree,** 2007 - 2009<br>
 *Computer Information Systems, Web Management/Web Master*
 **3.68 GPA**
 
 
 ## Accomplishments
 
-**Projects**
-
-* **Shipit,** *firefox extension* 2020
-I wrote a simple firefox extension for pasting ShipIt Squirrel gifs in PRs.
-* **VS Code Gist,** *VS Code Extension* 2017 - 2020
-I created a VS Code Gist extension based on an existing extension. I re-wrote the application
-to use async/await and a more recent version of TypeScript. It has a good
-number of active users today.
-* **Portland TypeScript Meetup,** *meetup organizer* 2014 - 2018
+* **Portland TypeScript Meetup,** *meetup organizer* 2014 - 2018<br>
 I co-organized a local meetup. I was responsible for booking speakers, updating the website, and managing social media. I gave a few talks to fill in when a speaker canceled.
-* **Learn With Us,** *podcast* 2017 - 2018
+* **Learn With Us,** *podcast* 2017 - 2018<br>
 I hosted a weekly podcast examining the teacher/student education space around software development.
-* **Mentor,** *Portland Code School*
+* **Mentor,** *Portland Code School* 2014 - 2015<br>
 I mentored multiple teams for their final showcase project where they build a fully functional web application on Node, MongoDB, and Backbone.
-* **Extension Author,** *Visual Studio Code Gist*
+* **Extension Author,** *Visual Studio Code Gist* 2017 - 2020<br>
 I maintain a visual studio code extension for managing GitHub Gists within Visual Studio Code.
+* **Shipit,** *firefox extension* 2020<br>
+I wrote a simple firefox extension for pasting ShipIt Squirrel gifs in PRs.
