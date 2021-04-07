@@ -1,7 +1,7 @@
 ---
 layout: resume
 title: Ken Howard
-summary: Senior Software Engineer
+summary: Lead Software Engineer
 pageclass: resume
 noindex: true
 ---
@@ -27,21 +27,46 @@ afraid to voice my opinion while capable of hearing the opinions of others.
 **Nike, Inc.** Beaverton, OR<br>
 **Lead Software Engineer,** July 2017 - Present
 
-* Leading a team of skilled engineers building Nike's consumer (_click stream_)
-analytics pipeline for nike.com and mobile applications.
-* Building high availability and resiliant ingest for all consumer facing applications.
-* Leveraging industry standards like Docker, Kubernetes, Kafaka to facilitate a
-seemless stream of data-flow from client to analytics dashboard.
-* Build browser extensions and user interfaces to enable analytics debugging.
-* Work with 3rd party services like Adobe Analytics, Optimizely, Segment,
-Amazon S3, Okta, and many more.
+* Established an elite team where deploys to production occur seemlessly 10 to
+20 times per day.
+* Introduced and maintain strong coding standards and development conventions
+to keep developers focused on delivering business value.
+* Migrated multiple legacy analytics instrumentations to a single pipeline
+which is driving personalization and business decisions.
+* Build systems to catalog event defintitions so stakeholders and product
+managers can see see what events are implemented and what an event should look
+like.
+* Build tools for engineers to better understand their data and to know whether
+or not their data is valid.
+* Worked closely with experience engineers to adopt new analytics libraries
+across nike.com and mobile applications including the Nike App and SNKRS.
+
+#### Key Projects
+
+* **Nike-First Data Pipeline**<br>
+Nike has a large portfolio of digital experiences and has established analytics
+in different ways across these digital experiences. We were tasked with
+migrating all of the digital experiences (Nike App, NRC, NTC, nike.com, SNKRS)
+to a Nike-First Data Pipeline. Establishing our own pipeline meant the business
+no longer had to support fragmented analytics and we could start to manage data
+as a product.
+
+* **Adobe Analytics Integration**<br>
+Nike has used Adobe Analytics SDKs across digital experiences for years. Like
+the Nike-First Data Pipeline we had digital experiences doing things a
+differently which causes confusion on what the data really means. By migrating
+away from the Adobe Analytics SDKs and away from Segment destinations into a
+single microservice driven by property mappings in our event definition catalog
+we were able to reduce complexity and increase the confidence in the data
+business analysts use to make critical decisions.
 
 **CSG Pro,** Portland, OR<br>
 **Web Developer,** February 2014 - July 2017
 
+* Built insurance applications for cities and counties to manage employee
+claims.
 * Developed web applications using libraries including Angular (v1.x, v2.x+),
 Knockout, .NET (v4.x+, Core v1.x+), Node.js, Entity Framework, and Sequelize.
-* Present team with new technologies and workflows.
 * Worked with client teams to deliver feature complete, cross-platform, web
 applications.
 
@@ -55,8 +80,8 @@ applications.
 **Turtledove Clemens,** Portland, OR<br>
 **Interactive Manager,** July 2011 - February 2014
 
-* Designed & Developed websites, landing pages, Facebook contest entry forms, e-mail newsletters, display banner ads, and more.
-* Published blogs on technology and the changing social media platforms.
+* Designed and developed websites, landing pages, e-mail newsletters, display
+banner ads, and more.
 * Worked with clients such as Wendy's, Oil Can Henry's, Clackamas County
 
 ## Education
@@ -69,12 +94,21 @@ applications.
 ## Accomplishments
 
 * **Portland TypeScript Meetup,** *meetup organizer* 2014 - 2018<br>
-I co-organized a local meetup. I was responsible for booking speakers, updating the website, and managing social media. I gave a few talks to fill in when a speaker canceled.
+I organized a local meetup. I was responsible for booking speakers, updating
+the website, and managing social media. I gave a few talks to fill in when a
+speaker canceled.
+
 * **Learn With Us,** *podcast* 2017 - 2018<br>
-I hosted a weekly podcast examining the teacher/student education space around software development.
+I hosted a weekly podcast examining the teacher/student education space around
+software development.
+
 * **Mentor,** *Portland Code School* 2014 - 2015<br>
-I mentored multiple teams for their final showcase project where they build a fully functional web application on Node, MongoDB, and Backbone.
+I mentored multiple teams for their final showcase project where they build a
+fully functional web application on Node, MongoDB, and Backbone.
+
 * **Extension Author,** *Visual Studio Code Gist* 2017 - 2020<br>
-I maintain a visual studio code extension for managing GitHub Gists within Visual Studio Code.
+I maintain a visual studio code extension for managing GitHub Gists within
+Visual Studio Code.
+
 * **Shipit,** *firefox extension* 2020<br>
 I wrote a simple firefox extension for pasting ShipIt Squirrel gifs in PRs.
