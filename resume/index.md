@@ -34,7 +34,7 @@ to keep engineers focused on delivering business value.
 drive personalization and business decisions.
 * Build systems to catalog event definitions to inform stakeholders and product
 owners about the shape of their events.
-*  Build tools for engineers to understand their data and to know whether it is
+* Build tools for engineers to understand their data and to know whether it is
 valid or not.
 * Work closely with application teams to adopt new analytics SDKs.
 
