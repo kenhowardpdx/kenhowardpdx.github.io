@@ -6,7 +6,7 @@ pageclass: resume
 noindex: true
 ---
 
-I'm looking to work with creative people and to build amazing products with
+I'm looking to work with creative people and build amazing products with
 clean interfaces. There's more than one way to solve a problem but the best way
 to solve it is with collaboration. I'm a collaborative team member and not
 afraid to voice my opinion while capable of hearing the opinions of others.
@@ -27,32 +27,31 @@ afraid to voice my opinion while capable of hearing the opinions of others.
 **Nike, Inc.** Beaverton, OR<br>
 **Lead Software Engineer,** July 2017 - Present
 
-* Established an elite team where deploys to production occur seemlessly 10 to
+* Establish an elite team that deploys to production occur seemlessly 10 to
 20 times per day.
 * Introduced and maintain strong coding standards and development conventions
 to keep developers focused on delivering business value.
-* Migrated multiple legacy analytics instrumentations to a single pipeline
+* Migrate multiple legacy analytics instrumentations to a single pipeline
 which is driving personalization and business decisions.
 * Build systems to catalog event defintitions so stakeholders and product
 managers can see see what events are implemented and what an event should look
 like.
 * Build tools for engineers to better understand their data and to know whether
-or not their data is valid.
-* Worked closely with experience engineers to adopt new analytics libraries
-across nike.com and mobile applications including the Nike App and SNKRS.
+their data is valid or not.
+* Work closely with experience engineers to adopt new analytics SDKs across
+nike.com and mobile applications including the Nike App and SNKRS.
 
 #### Key Projects
 
 * **Nike-First Data Pipeline**<br>
-Nike has a large portfolio of digital experiences and has established analytics
-in different ways across these digital experiences. We were tasked with
-migrating all of the digital experiences (Nike App, NRC, NTC, nike.com, SNKRS)
-to a Nike-First Data Pipeline. Establishing our own pipeline meant the business
-no longer had to support fragmented analytics and we could start to manage data
-as a product.
+A large portfolio of digital experiences have implemented analytics
+in different ways. We were tasked with migrating all of the digital experiences
+(Nike App, NRC, NTC, nike.com, SNKRS) to a Nike-First Data Pipeline.
+Establishing our own pipeline meant we no longer had to support fragmented
+analytics and could start to manage data as a product.
 
 * **Adobe Analytics Integration**<br>
-Nike has used Adobe Analytics SDKs across digital experiences for years. Like
+Applications have used Adobe Analytics SDKs across digital experiences for years. Like
 the Nike-First Data Pipeline we had digital experiences doing things a
 differently which causes confusion on what the data really means. By migrating
 away from the Adobe Analytics SDKs and away from Segment destinations into a
@@ -63,11 +62,11 @@ business analysts use to make critical decisions.
 **CSG Pro,** Portland, OR<br>
 **Web Developer,** February 2014 - July 2017
 
-* Built insurance applications for cities and counties to manage employee
+* Build insurance applications for cities and counties to manage employee
 claims.
-* Developed web applications using libraries including Angular (v1.x, v2.x+),
+* Develop web applications using libraries including Angular (v1.x, v2.x+),
 Knockout, .NET (v4.x+, Core v1.x+), Node.js, Entity Framework, and Sequelize.
-* Worked with client teams to deliver feature complete, cross-platform, web
+* Work with client teams to deliver feature complete, cross-platform, web
 applications.
 
 **Treehouse,** Portland, OR<br>
@@ -80,9 +79,9 @@ applications.
 **Turtledove Clemens,** Portland, OR<br>
 **Interactive Manager,** July 2011 - February 2014
 
-* Designed and developed websites, landing pages, e-mail newsletters, display
+* Design and develop websites, landing pages, e-mail newsletters, display
 banner ads, and more.
-* Worked with clients such as Wendy's, Oil Can Henry's, Clackamas County
+* Work with clients such as Wendy's, Oil Can Henry's, Clackamas County
 
 ## Education
 **Mt. Hood Community College,** Gresham, OR<br>
@@ -94,9 +93,8 @@ banner ads, and more.
 ## Accomplishments
 
 * **Portland TypeScript Meetup,** *meetup organizer* 2014 - 2018<br>
-I organized a local meetup. I was responsible for booking speakers, updating
-the website, and managing social media. I gave a few talks to fill in when a
-speaker canceled.
+I was responsible for booking speakers, updating the website, and managing
+social media. I gave a few talks to fill in when a speaker canceled.
 
 * **Learn With Us,** *podcast* 2017 - 2018<br>
 I hosted a weekly podcast examining the teacher/student education space around
