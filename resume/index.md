@@ -6,10 +6,10 @@ pageclass: resume
 noindex: true
 ---
 
-I’m looking to work with creative people to build amazing products with clean
-interfaces. There’s more than one way to solve a problem but the best way to
-solve it is with collaboration. I’m a collaborative team member and not afraid
-to voice my opinion while capable of hearing the opinions of others.
+I’m looking to work with creative people building amazing products with clean
+interfaces. There’s more than one way to solve a problem and the best way to
+solve it is with collaboration. I’m a collaborative team member vocal with my
+opinions and willing to hear the opinions of others.
 
 ## Contact Information
 **Email:** <a href="mailto:ken@kenhoward.dev">ken@kenhoward.dev</a><br>
@@ -27,46 +27,43 @@ to voice my opinion while capable of hearing the opinions of others.
 **Nike, Inc.** Beaverton, OR<br>
 **Lead Software Engineer,** July 2017 - Present
 
-* Establish an elite team that deploys to production occur seamlessly 10 to 20
-times per day.
-* Introduced and maintain strong coding standards and development conventions
-to keep developers focused on delivering business value.
-* Migrate multiple legacy analytics instrumentations to a single pipeline which
-is driving personalization and business decisions.
-* Build systems to catalog event definitions so stakeholders and product
-managers can see what events are implemented and what an event should look
-like.
-*  Build tools for engineers to better understand their data and to knowi
-whether their data is valid or not.
-* Work closely with experience engineers to adopt new analytics SDKs across
-nike.com and mobile applications including the Nike App and SNKRS.
+* Establish an elite team with production deployments 10 to 20 times per day.
+* Introduce and maintain strong coding standards and development conventions
+to keep engineers focused on delivering business value.
+* Migrate multiple legacy analytics instrumentations to a single pipeline to
+drive personalization and business decisions.
+* Build systems to catalog event definitions to inform stakeholders and product
+owners about the shape of their events.
+*  Build tools for engineers to understand their data and to know whether it is
+valid or not.
+* Work closely with application teams to adopt new analytics SDKs.
 
 #### Key Projects
 
 * **Nike-First Data Pipeline**<br>
-A large portfolio of Digital Experiences implemented analytics in different
-ways. We were tasked with migrating all of the Digital Experiences (Nike App,
+A large portfolio of applications implemented analytics in different
+ways. We were tasked with migrating all consumer-facing applications (Nike App,
 NRC, NTC, nike.com, SNKRS) to a Nike-First Data Pipeline. Establishing our
 pipeline meant we no longer had to support fragmented analytics and could start
 to manage data as a product.
 
 * **Adobe Analytics Integration**<br>
-Applications have used Adobe Analytics SDKs across Digital Experiences for
-years. Like the Nike-First Data Pipeline, we had Digital Experiences doing
-things differently which confuses what the data means. By migrating away from
-the Adobe Analytics SDKs and away from Segment destinations into a single
-microservice driven by property mappings in our event definition catalog we
-were able to reduce complexity and increase the confidence in the data business
-analysts use to make critical decisions.
+Applications have used Adobe Analytics SDKs for years. Like the Nike-First Data
+Pipeline, applications Adobe Analytics configured differently which confuses
+what the data means. By migrating away from the Adobe Analytics SDKs and away
+from Segment destinations into a single microservice driven by property
+mappings in our event definition catalog we were able to reduce complexity and
+increase the confidence in the data business analysts use to make critical
+decisions.
 
 **CSG Pro,** Portland, OR<br>
 **Web Developer,** February 2014 - July 2017
 
 * Build insurance applications for cities and counties to manage employee
 claims.
-* Develop web applications using libraries including Angular (v1.x, v2.x+),
-Knockout, .NET (v4.x+, Core v1.x+), Node.js, Entity Framework, and Sequelize.
-* Work with client teams to deliver feature complete, cross-platform, web
+* Build agriculture, livestock, and municipal maintenance inventory management
+applications.
+* Embed in client teams to deliver feature-complete, cross-platform, web
 applications.
 
 **Treehouse,** Portland, OR<br>
@@ -81,7 +78,7 @@ applications.
 
 * Design and develop websites, landing pages, e-mail newsletters, display
 banner ads, and more.
-* Work with clients such as Wendy's, Oil Can Henry's, Clackamas County
+* Work with clients such as Wendy's, Oil Can Henry's, Clackamas County.
 
 ## Education
 **Mt. Hood Community College,** Gresham, OR<br>
